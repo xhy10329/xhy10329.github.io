@@ -10,4 +10,26 @@ add addtional information
 
 
 
+### Add som links
+
+I like [google](https://www.google.com)
+
+
+I can link directly to my [about page](about.html)
+
+
+### Picture of my xianxian
+
+<img src="image/timg.jpg" style="width:75%">
+
+
+
+
+
+
+
+
+
+
+
 
