@@ -2,8 +2,15 @@
 title: "Experience"
 ---
 
-### About this site
+### Education
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+* Columbia University, Master of Science in Biostatistics, Mailman School of Public Health
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+* Imperial College London, Master of Science in Virology, Faculty of Medicine
+
+* Shandong University, Bachelor of Science in Biological Science
+
+
+### Work
+
+* The University of Hong Kong, Research Assistant, Center of Influenza Research, School of Public Health

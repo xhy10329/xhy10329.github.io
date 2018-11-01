@@ -1,26 +1,25 @@
 ---
-title: "Holy cow!"
+title: "Hongyao Xie's website"
 ---
 
-### I have a webpage!
+### Introduction
 
-And I can put all kinds of stuff on it!
-
-add addtional information
+Hi there! You just found Hongyao's website!
 
 
+### Links
 
-### Add som links
-
-I like [google](https://www.google.com)
-
-
-I can link directly to my [about page](about.html)
+[My GitHub account](https://github.com/xhy10329)
 
 
-### Picture of my xianxian
+[Email address](xhy10329@gmail.com)
 
-<img src="image/timg.jpg" style="width:75%">
+
+### Something fun...
+
+Drawn several years ago...not the best one but my favorite
+
+<img src="image/pics.jpg" style="width:75%">
 
 
 
