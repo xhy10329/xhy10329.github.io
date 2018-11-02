@@ -1,0 +1,88 @@
+---
+title: "flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r, echo=FALSE}
+# Get the data
+data(instacart)
+itc <- janitor::clean_names(instacart)
+
+itc$order_dow <- factor(itc$order_dow, labels = c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"))
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r, echo=FALSE}
+itc_aisle <- itc %>% 
+  group_by(aisle) %>% 
+  summarise(order_num = n())
+
+ggplot_aisle <- itc_aisle[order(itc_aisle$order_num, decreasing = TRUE),] %>% 
+  ggplot() + 
+  geom_point(aes(x = reorder(aisle, -order_num),y = order_num)) +
+  labs(
+    title = "Scatterplot of the number of items ordered in each aisle",
+    x = "Aisle",
+    y = "The number of items"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, size = rel(1)))
+
+ggplotly(ggplot_aisle)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r, echo=FALSE}
+ggplot_line <- itc %>% 
+  group_by(order_dow, order_hour_of_day) %>%
+  summarize(count = n()) %>% 
+  ggplot(aes(x = order_hour_of_day, y = count, color = order_dow)) +
+    geom_line() +
+    labs(
+      x = "Hour",
+      y = "Number of orders",
+      title = "24-hour orders by day"
+    ) 
+
+ggplotly(ggplot_line)
+```
+
+### Chart C
+
+barchart of aisle
+```{r, echo=FALSE}
+ggplot_bar <-  
+  itc %>%
+  group_by(department) %>% 
+  summarize(count = n()) %>% 
+  ggplot(aes(x = department, y = count, color = department)) +
+    geom_bar(stat="identity") +
+    labs(
+      x = "Department",
+      y = "Number of items",
+      title = "Number of items bought by department"
+    ) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, size = rel(1)))
+ggplotly(ggplot_bar)
+```
+

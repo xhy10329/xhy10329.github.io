@@ -7,17 +7,10 @@ title: "Hongyao Xie's website"
 Hi there! You just found Hongyao's website!
 
 
-### Links
-
-[My GitHub account](https://github.com/xhy10329)
-
-
-[Email address](xhy10329@gmail.com)
-
 
 ### Something fun...
 
-Drawn several years ago...not the best one but my favorite
+Was drawn several years ago...not the best one but my favorite
 
 <img src="image/pics.jpg" style="width:75%">
 
